@@ -66,6 +66,7 @@ By the end, you should "feel":
 - [x] Simulate Poisson processes and validate theory
 - [x] Connect Poisson to Exponential distributions
 - [x] Use percentiles for practical decision-making
+- [x] Create visualizations with modern dark mode styling
 - [ ] (Optional) Perform Bayesian updates on uncertain rates
 
 ---
@@ -78,7 +79,8 @@ By the end, you should "feel":
 - [x] Simulate 365 days of defects
 - [x] Compare simulated vs theoretical statistics
 - [x] Calculate 90th percentile and validate in simulation
-- [ ] Link Poisson to Exponential waiting times
+- [x] Link Poisson to Exponential waiting times
+- [x] Create beautiful visualizations showing theory and practice
 - [ ] Perform Bayesian update on uncertain λ
 
 ---
@@ -105,8 +107,8 @@ pip install -r requirements.txt
 ### Setup
 
 ```bash
-git clone <repo-url>
-cd "A Detective Story About Probability — Building Intuition with PMF, CDF, Poisson & Exponential"
+git clone https://github.com/Tuminha/A-Detective-Story-About-Probability-Building-Intuition-with-PMF-CDF-Poisson-Exponential.git
+cd A-Detective-Story-About-Probability-Building-Intuition-with-PMF-CDF-Poisson-Exponential
 jupyter notebook notebooks/01_poisson_defects.ipynb
 ```
 
@@ -161,15 +163,17 @@ jupyter notebook notebooks/01_poisson_defects.ipynb
 
 </details>
 
-### Phase 4: Exponential Link (Optional) 🔄
+### Phase 4: Exponential Link (Optional) ✅
 
 <details>
 <summary><strong>Details</strong></summary>
 
-- [ ] Simulate 5000 Exponential waiting times
-- [ ] Overlay theoretical PDF on histogram
-- [ ] Verify mean ≈ 1/λ
-- [ ] Understand memoryless property
+- [x] Simulate 5000 Exponential waiting times
+- [x] Overlay theoretical PDF on histogram
+- [x] Verify mean ≈ 1/λ
+- [x] Understand memoryless property
+
+*See visualization above in the Results section.*
 
 </details>
 
@@ -204,6 +208,34 @@ jupyter notebook notebooks/01_poisson_defects.ipynb
 **90th Percentile Check:**
 - 90th percentile: k ≈ 11
 - Fraction ≥ 90th percentile: ≈ 0.10 (validates percentiles)
+
+### 🖼 Visualizations
+
+<div align="center">
+
+#### Poisson(7) PMF — Probability Mass Function
+
+<img src="images/poisson7_pmf.png" alt="Poisson(7) PMF showing discrete probabilities for k=0 to 24" width="680" />
+
+*The PMF shows the probability of exactly k defects. Notice how it peaks around λ=7 and sums to 1.*
+
+<br /><br />
+
+#### Poisson(7) CDF — Cumulative Distribution Function
+
+<img src="images/poisson7_cdf.png" alt="Poisson(7) CDF showing cumulative probabilities as a step function" width="680" />
+
+*The CDF shows P(X≤k) — a staircase function that approaches 1. Differences between CDF values give us the PMF.*
+
+<br /><br />
+
+#### Exponential(λ=7) — Waiting Times Between Defects
+
+<img src="images/exponential_waiting_times.png" alt="Exponential distribution showing waiting times between Poisson events" width="680" />
+
+*The Exponential distribution models waiting times between Poisson events. Notice the exponential decay — most waiting times are short, with fewer long waits.*
+
+</div>
 
 ### 📌 Business Interpretation
 
@@ -240,7 +272,7 @@ jupyter notebook notebooks/01_poisson_defects.ipynb
 
 ## 🚀 Next Steps
 
-- [ ] Complete Exponential link exercises
+- [x] Complete Exponential link exercises ✅
 - [ ] Complete Bayesian update exercise
 - [ ] Experiment with different λ values (λ=10, λ=5)
 - [ ] Explore Poisson additivity: Poisson(7) + Poisson(7) ≈ Poisson(14)
