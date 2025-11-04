@@ -231,7 +231,7 @@ jupyter notebook notebooks/01_poisson_defects.ipynb
 
 #### Exponential(λ=7) — Waiting Times Between Defects
 
-<img src="./images/exponential_waiting_times.png" alt="Exponential distribution showing waiting times between Poisson events" width="680" />
+<img src="https://raw.githubusercontent.com/Tuminha/A-Detective-Story-About-Probability-Building-Intuition-with-PMF-CDF-Poisson-Exponential/main/images/exponential_waiting_times.png" alt="Exponential distribution showing waiting times between Poisson events" width="680" />
 
 *The Exponential distribution models waiting times between Poisson events. Notice the exponential decay — most waiting times are short, with fewer long waits.*
 
